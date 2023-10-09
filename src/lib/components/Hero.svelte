@@ -8,8 +8,9 @@
 		<div class="max-w-md">
 			<h1 class="text-5xl font-bold">ŠO FRI - FRiKi</h1>
 			<p class="py-6">
-				Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-				quasi. In deleniti eaque aut repudiandae et a id nisi.
+				Študentska Organizacija <a href="https://fri.uni-lj.si/" class="text-[#d9000f]"
+					>Fakultete za Računalništvo in Informatiko</a
+				>
 			</p>
 			<!-- <button class="btn btn-primary">Get Started</button> -->
 		</div>

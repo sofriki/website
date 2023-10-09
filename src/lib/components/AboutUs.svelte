@@ -18,7 +18,8 @@
 	<p>
 		Smo del Študentske organizacije Univerze v Ljubljani (<a
 			href="https://www.sou-lj.si/sl"
-			target="_blank">ŠOU LJ</a
+			target="_blank"
+			class="text-[#d9000f]">ŠOU LJ</a
 		>). Tako kot na ostalih fakultetah Univerze v Ljubljani, jo ima tudi FRI. Kljub temu nismo del
 		FRI-ja, ampak Študentske organizacije Univerze
 	</p>

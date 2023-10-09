@@ -13,6 +13,9 @@
 		</div>
 	</nav>-->
 	<aside>
-		<p>Copyright © {year} - Made with ❤️ by <a href="https://aikenahac.com">Aiken</a></p>
+		<p>
+			Copyright © {year} - Made with ❤️ by
+			<a href="https://aikenahac.com" class="text-[#d9000f]">Aiken</a>
+		</p>
 	</aside>
 </footer>
