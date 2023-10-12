@@ -37,6 +37,18 @@ export interface StrapiImage {
 	};
 }
 
+export interface Links {
+	data: LinkData[];
+}
+
+export interface LinkData {
+	id: number;
+	attributes: {
+		display: string;
+		link: string;
+	};
+}
+
 export enum AboutUsComponentTypes {
 	TextSection = 'landing.about-us',
 	ImageSection = 'landing.image-section',

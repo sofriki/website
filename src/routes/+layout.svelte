@@ -4,7 +4,7 @@
 	import '../app.postcss';
 </script>
 
-<div>
+<div class="flex flex-col justify-between min-h-screen">
 	<Navbar />
 	<slot />
 	<Footer />

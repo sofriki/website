@@ -10,7 +10,8 @@
 	</div>
 	<div class="flex-none">
 		<ul class="menu menu-horizontal px-1">
-			<li><a href="https://l.friki.si">Links</a></li>
+			<li><a href="/">Home</a></li>
+			<li><a href="/links">Links</a></li>
 		</ul>
 	</div>
 </div>
