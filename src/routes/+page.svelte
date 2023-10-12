@@ -4,8 +4,6 @@
 	import type { PageData } from './$types';
 
 	export let data: PageData;
-
-	console.log('HEROOOO' + data.heroImage);
 </script>
 
 <svelte:head>
@@ -18,5 +16,5 @@
 		subtitle={data.subtitle}
 		heroImage={data.heroImage.data.attributes.url}
 	/>
-	<AboutUs />
+	<AboutUs sections={data.aboutUs} />
 </div>

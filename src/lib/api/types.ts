@@ -6,26 +6,39 @@ export interface LandingPage {
 
 export interface LandingPageData {
 	title: string;
-	heroImage: StrapiImage;
-	headerLogo: StrapiImage;
+	heroImage: { data: StrapiImage };
+	headerLogo: { data: StrapiImage };
 	subtitle: string;
-	aboutUs: (AboutUsTextSection | AboutUsImageSection)[];
+	aboutUs: (AboutUsTextSection | AboutUsImageSection | AboutUsDivider)[];
 }
 
-interface AboutUsTextSection {
-	title: string;
-	content: string;
+export interface AboutUsTextSection {
+	__component: AboutUsComponentTypes.TextSection;
+	title: string | null;
+	content: string | null;
 }
 
-interface AboutUsImageSection {
-	images: StrapiImage[];
-}
-
-interface StrapiImage {
-	data: {
-		id: number;
-		attributes: {
-			url: string;
-		};
+export interface AboutUsImageSection {
+	__component: AboutUsComponentTypes.ImageSection;
+	images: {
+		data: StrapiImage[];
 	};
+}
+
+export interface AboutUsDivider {
+	__component: AboutUsComponentTypes.Divider;
+	text: string | null;
+}
+
+export interface StrapiImage {
+	id: number;
+	attributes: {
+		url: string;
+	};
+}
+
+export enum AboutUsComponentTypes {
+	TextSection = 'landing.about-us',
+	ImageSection = 'landing.image-section',
+	Divider = 'landing.divider'
 }
