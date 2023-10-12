@@ -49,6 +49,16 @@ export interface LinkData {
 	};
 }
 
+export interface Banner {
+	data: BannerData | null;
+}
+
+export interface BannerData {
+	attributes: {
+		content: string | null;
+	};
+}
+
 export enum AboutUsComponentTypes {
 	TextSection = 'landing.about-us',
 	ImageSection = 'landing.image-section',
