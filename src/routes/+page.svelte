@@ -1,6 +1,11 @@
-<script>
+<script lang="ts">
 	import AboutUs from '$lib/components/AboutUs.svelte';
 	import Hero from '$lib/components/Hero.svelte';
+	import type { PageData } from './$types';
+
+	export let data: PageData;
+
+	console.log('HEROOOO' + data.heroImage);
 </script>
 
 <svelte:head>
@@ -8,6 +13,10 @@
 </svelte:head>
 
 <div>
-	<Hero />
+	<Hero
+		title={data.title}
+		subtitle={data.subtitle}
+		heroImage={data.heroImage.data.attributes.url}
+	/>
 	<AboutUs />
 </div>
