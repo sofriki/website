@@ -10,39 +10,47 @@ export interface LandingPageData {
 	headerLogo: { data: StrapiImage };
 	subtitle: string;
 	sections: (
-		| AboutUsTitleComponent
-		| AboutUsTextComponent
-		| AboutUsImageComponent
-		| AboutUsDividerComponent
-		| AboutUsSpacerComponent
+		| TitleComponent
+		| TextComponent
+		| ImageComponent
+		| DividerComponent
+		| SpacerComponent
+		| UOComponent
 	)[];
 }
 
-export interface AboutUsTitleComponent {
-	__component: AboutUsComponentTypes.Title;
+export interface TitleComponent {
+	__component: ComponentTypes.Title;
 	title: string | null;
 }
 
-export interface AboutUsTextComponent {
-	__component: AboutUsComponentTypes.TextSection;
+export interface TextComponent {
+	__component: ComponentTypes.TextSection;
 	title: string | null;
 	content: string | null;
 }
 
-export interface AboutUsImageComponent {
-	__component: AboutUsComponentTypes.ImageSection;
+export interface ImageComponent {
+	__component: ComponentTypes.ImageSection;
 	images: {
 		data: StrapiImage[];
 	};
 }
 
-export interface AboutUsDividerComponent {
-	__component: AboutUsComponentTypes.Divider;
+export interface DividerComponent {
+	__component: ComponentTypes.Divider;
 	text: string | null;
 }
 
-export interface AboutUsSpacerComponent {
-	__component: AboutUsComponentTypes.Spacer;
+export interface SpacerComponent {
+	__component: ComponentTypes.Spacer;
+}
+
+export interface UOComponent {
+	__component: ComponentTypes.UO;
+	uos: {
+		data: UORep[];
+	};
 }
 
 export interface Links {
@@ -86,6 +94,17 @@ export interface Gallery {
 	};
 }
 
+export interface UORep {
+	id: number;
+	attributes: {
+		name: string;
+		role: string;
+		image: {
+			data: StrapiImage;
+		};
+	};
+}
+
 export interface StrapiImage {
 	id: number;
 	attributes: {
@@ -93,10 +112,11 @@ export interface StrapiImage {
 	};
 }
 
-export enum AboutUsComponentTypes {
+export enum ComponentTypes {
 	Title = 'landing.title',
 	TextSection = 'landing.about-us',
 	ImageSection = 'landing.image-section',
 	Divider = 'landing.divider',
-	Spacer = 'landing.spacer'
+	Spacer = 'landing.spacer',
+	UO = 'landing.uo'
 }
