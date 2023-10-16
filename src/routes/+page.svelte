@@ -1,5 +1,5 @@
 <script lang="ts">
-	import AboutUs from '$lib/components/AboutUs.svelte';
+	import Sections from '$lib/components/Sections.svelte';
 	import Hero from '$lib/components/Hero.svelte';
 	import type { PageData } from './$types';
 
@@ -16,5 +16,5 @@
 		subtitle={data.subtitle}
 		heroImage={data.heroImage.data.attributes.url}
 	/>
-	<AboutUs sections={data.aboutUs} />
+	<Sections sections={data.sections} />
 </div>
