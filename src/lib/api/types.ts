@@ -45,13 +45,6 @@ export interface AboutUsSpacerComponent {
 	__component: AboutUsComponentTypes.Spacer;
 }
 
-export interface StrapiImage {
-	id: number;
-	attributes: {
-		url: string;
-	};
-}
-
 export interface Links {
 	data: LinkData[];
 }
@@ -71,6 +64,32 @@ export interface Banner {
 export interface BannerData {
 	attributes: {
 		content: string | null;
+	};
+}
+
+export interface Galleries {
+	data: Gallery[] | [];
+}
+
+export interface Gallery {
+	id: number;
+	attributes: {
+		title: string;
+		description: string;
+		images: {
+			data: StrapiImage[];
+		};
+
+		cover: {
+			data: StrapiImage;
+		};
+	};
+}
+
+export interface StrapiImage {
+	id: number;
+	attributes: {
+		url: string;
 	};
 }
 

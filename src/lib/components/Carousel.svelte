@@ -1,8 +1,6 @@
 <script lang="ts">
-	import { PUBLIC_API_URL } from '$env/static/public';
 	import type { StrapiImage } from '$lib/api/types';
-
-	const getImageUrl = (location: string) => PUBLIC_API_URL + location;
+	import { getImageUrl } from '$lib/api/utils';
 
 	export let images: StrapiImage[];
 </script>

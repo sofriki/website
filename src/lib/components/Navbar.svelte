@@ -10,8 +10,9 @@
 	</div>
 	<div class="flex-none">
 		<ul class="menu menu-horizontal px-1">
-			<li><a href="/">Home</a></li>
+			<li><a href="/">Domov</a></li>
 			<li><a href="/links">Links</a></li>
+			<li><a href="/gallery">Galerija</a></li>
 		</ul>
 	</div>
 </div>
