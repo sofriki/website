@@ -62,6 +62,9 @@ export interface LinkData {
 	attributes: {
 		display: string;
 		link: string;
+		cover: {
+			data: StrapiImage;
+		};
 	};
 }
 

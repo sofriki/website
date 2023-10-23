@@ -16,7 +16,7 @@ export async function getLandingPageContent(): Promise<LandingPageData> {
 }
 
 export async function getLinks(): Promise<LinkData[]> {
-	const data = await axiosInstance.get<Links>('/links');
+	const data = await axiosInstance.get<Links>('/links?populate=deep');
 
 	return data.data.data;
 }
