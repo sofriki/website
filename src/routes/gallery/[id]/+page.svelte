@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { getImageUrl } from '$lib/api/utils';
 	import type { PageData } from './$types';
 
 	const openModal = (image: string) => {
@@ -28,7 +27,7 @@
 				<img
 					on:click={() => openModal(image.attributes.url)}
 					class="h-auto max-w-full rounded-lg cursor-pointer"
-					src={getImageUrl(image.attributes.url)}
+					src={image.attributes.url}
 					alt="Gallery item"
 				/>
 			</div>
@@ -36,8 +35,8 @@
 	</div>
 
 	<dialog id="image_modal" class="modal">
-		<div class="flex flex-col items-center justify-items-center modal-box w-11/12 max-w-5xl">
-			<img class="rounded-lg" src={getImageUrl(modalImage)} alt="Opened item" />
+		<div class="flex flex-col items-center justify-items-center modal-box w-11/12 max-w-5xl h-full">
+			<img class="rounded-lg h-full object-contain" src={modalImage} alt="Opened item" />
 		</div>
 		<form method="dialog" class="modal-backdrop">
 			<button>close</button>

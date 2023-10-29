@@ -1,16 +1,19 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import type { Gallery } from '$lib/api/types';
-	import { getImageUrl } from '$lib/api/utils';
 
 	const openGallery = (id: number) => goto(`/gallery/${id}`);
 
 	export let gallery: Gallery;
 </script>
 
-<div class="card w-96 bg-base-100 shadow-xl image-full">
+<div class="card w-96 h-64 bg-base-100 shadow-xl image-full">
 	<figure>
-		<img src={getImageUrl(gallery.attributes.cover.data.attributes.url)} alt="Gallery cover" />
+		<img
+			class="w-96 h-64 object-cover"
+			src={gallery.attributes.cover.data.attributes.url}
+			alt="Gallery cover"
+		/>
 	</figure>
 	<div class="card-body">
 		<h2 class="card-title">{gallery.attributes.title}</h2>
