@@ -112,6 +112,11 @@ export interface StrapiImage {
 	id: number;
 	attributes: {
 		url: string;
+		formats: {
+			thumbnail: {
+				url: string;
+			};
+		};
 	};
 }
 

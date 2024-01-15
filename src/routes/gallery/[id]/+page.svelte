@@ -10,7 +10,7 @@
 
 	export let data: PageData;
 
-	let modalImage: string = data.attributes.images.data[0].attributes.url;
+	let modalImage: string = data.attributes.images.data[0].attributes.formats.thumbnail.url;
 </script>
 
 <div class="flex flex-col mx-48 my-8 max-[900px]:mx-8">
@@ -26,7 +26,7 @@
 				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 				<img
 					on:click={() => openModal(image.attributes.url)}
-					class="h-auto max-w-full rounded-lg cursor-pointer"
+					class="h-full max-w-full rounded-lg cursor-pointer object-cover"
 					src={image.attributes.url}
 					alt="Gallery item"
 				/>

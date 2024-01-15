@@ -14,7 +14,7 @@
 		<nav class="flex flex-col gap-1">
 			<a href="https://www.facebook.com/frikipage" class="link link-hover">Facebook</a>
 			<a href="https://www.instagram.com/sofri_friki" class="link link-hover">Instagram</a>
-			<a href="https://l.friki.si" class="link link-hover">Links</a>
+			<a href="/links" class="link link-hover">Links</a>
 		</nav>
 	</div>
 	<aside>
